@@ -1,5 +1,21 @@
 
 
+function oncall(){
+    if((document.getElementById("nick").value =="") ||
+    (document.getElementById("gender").value =="")||
+    (document.getElementById("level").value =="")||
+    (document.getElementById("skype").value =="") )
+    {
+        confirm("Please Enter All Details");
+    }
+    else{
+        pushing();
+    }
+   
+    
+}
+
+
 function pushing() {
     var xaa = document.getElementById("total_list").rows.length;
     var table = document.getElementById("total_list");
@@ -10,6 +26,7 @@ function pushing() {
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
 
+    
 
     var skypevar = document.getElementById("skype").value;
 
@@ -19,11 +36,11 @@ function pushing() {
     cell4.innerHTML = document.getElementById("level").value;
     cell5.innerHTML = skypevar.link("skype:"+skypevar+"?chat");
 
+    (document.getElementById("nick").value ="") ;
+    (document.getElementById("gender").value ="");
+    (document.getElementById("level").value ="");
+    (document.getElementById("skype").value ="");
+
 
 
 }
-
-
-
-
-

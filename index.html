@@ -2,110 +2,171 @@
 <html lang="en">
 
 <head>
-  <title>English Speaking</title>
+  <title>Language Exchange</title>
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+ <style>
+   tr, td {
+     max-width: 15px;
+   }
+   td {
+     overflow: hidden;
+     text-overflow: ellipsis;
+   }
+td:hover{
+  overflow: visible;
+}
+
+img{
+  width: 100%;
+   height: 100%;
+}
+ </style>
 
   <script src="javascript.js"></script>
 
-  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Language Exchange</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  
+    <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarSupportedContent">
+      <ul class="navbar-nav ">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
-
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Page Language
+          </a>
+          <div class="dropdown-menu w-50" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Portuguese</a>
+            
+          </div>
+        </li>
+        
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      
     </div>
   </nav>
 
-  <div class="container-fluid " style="font-size: small;">
+  <div id="demo" class="carousel slide" data-ride="carousel"  >
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner" style="height: 300px;">
+      <div class="carousel-item active">
+        <img src="images/never.jpg" alt="Quote" style="height: 300px;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/proud.jpg" alt="Quote1" style="height: 300px;">
+      </div>
+      
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  
+  </div>
+  
+  <div class="container-fluid mt-5" style="font-size: small;">
     <h3 class="my-3">Your Details</h3>
 
-    <div class="row">
-      <div class="col-6 col-md-6 col-xl-6">
-        <label for="nick">Nick</label>
-        <input id="nick" type="text" class="form-control w-50">
-      </div>
-      <div class="col-6 col-md-6 col-xl-6">
-        <label for="skype">Skype Id</label>
-        <input id="skype" type="text" class="form-control w-50">
-      </div>
+    
 
-    </div>
-    <div class="row my-3">
-      <div class="col-6 col-md-6 col-xl-6 w-50">
+      <div class="row">
+        <div class="col-6 col-md-6 col-xl-6">
+          <label for="nick">Nick</label>
+          <input id="nick" type="text" class="form-control w-50" required>
+        </div>
 
-        <label for="level">Level</label>
-        <br>
-        <select id="level" class="custom-select w-50">
-
-          <option>Beginner</option>
-          <option>Intermediate</option>
-          <option>Upper Intermediate</option>
-          <option>Advance</option>
-        </select>
-      </div>
-
-      <div class="col-6 col-md-6 col-xl-6 w-50">
-
-        <label for="gender">Gender</label>
-        <br>
-        <select id="gender" class="custom-select w-50">
-
-          <option>Male</option>
-          <option>Female</option>
-
-        </select>
-
-
-      </div>
-    </div>
-
-    <div class="row my-3 ml-0">
-      <div class="form-group">
-
-
-        <div class="my-3">
-          <button style="font-size: smaller;" class="btn btn-primary" type="submit" onclick="pushing()">Add Me</button>
+        <div class="col-6 col-md-6 col-xl-6">
+          <label for="skype">Skype Id</label>
+          <input id="skype" type="text" class="form-control w-50" required>
         </div>
       </div>
-    </div>
+
+      <div class="row my-3">
+        <div class="col-6 col-md-6 col-xl-6 w-50">
+
+          <label for="level">Level</label>
+          <br>
+          <select id="level" class="custom-select w-50" required>
+            
+            <option></option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Upper Intermediate</option>
+            <option>Advance</option>
+          </select>
+        </div>
+
+        <div class="col-6 col-md-6 col-xl-6 w-50">
+
+          <label for="gender">Gender</label>
+          <br>
+          <select id="gender" class="custom-select w-50" required>
+
+            <option></option>
+            <option >Male</option>
+            <option>Female</option>
+
+          </select>
+          
+
+
+        </div>
+      </div>
+
+      <div class="row my-3 ml-0">
+        <div class="form-group">
+
+
+          <div class="my-3">
+            <button style="font-size: smaller;" class="btn btn-primary" type="submit"
+              onclick="oncall()">Add Me</button>
+          </div>
+        </div>
+      </div>
   </div>
 
+ 
 
 
 
 
 
-
-  <div class=" container-fluid " >
+  <div class=" container-fluid ">
     <div class="row">
       <div class="col-12 col-">
 
-        <table id="total_list" class=" table table-success table-responsive-sm " style="font-size: smaller; height: 245px;">
-          <thead >
+        <table id="total_list" class=" table table-striped table-success table-responsive-sm "
+          style="font-size: smaller; height: 245px;">
+          <thead>
             <tr>
               <th scope="col">S No.</th>
               <th scope="col">Nick</th>
@@ -117,12 +178,12 @@
           <tbody>
             <!--
             <tr>
-              <th scope="row" id="serial_no"></th>
-              <td id="nick_arr"></td>
-              <td id="gender_arr"></td>
-              <td id="level_arr"></td>
-              <td id="skype_arr"></td>
-              <td id="icon_arr"> </td>
+              <td>1</th>
+              <td >Aditya</td>
+              <td >Male</td>
+              <td >Advance</td>
+              <td >adityadigant</td>
+              <td > </td>
             </tr>
           -->
 
